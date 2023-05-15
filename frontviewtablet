@@ -1,0 +1,2260 @@
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_name: true
+            name: Hallway
+            show_icon: true
+            show_label: true
+            show_state: false
+            size: 95px
+            state:
+              - value: 'off'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(61, 65, 67)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+              - value: 'on'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: rgb(179, 179, 179)
+            tap_action:
+              action: call-service
+              service: script.lights_main_hallway
+              service_data:
+                entity_id: null
+            entity: light.hallway
+            icon: hue:room-hallway
+            aspect_ratio: 1
+            label: |
+              [[[
+                return 'lights are ' + states['light.hallway'].state;
+              ]]]
+          - square: true
+            columns: 2
+            type: grid
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: disabled
+                    icon: mdi:motion-sensor-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    icon: mdi:motion-sensor
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: input_select.select_next
+                  service_data:
+                    entity_id: input_select.motion_sensing_hallway
+                entity: input_select.motion_sensing_hallway
+                icon: mdi:motion-sensor
+                name: null
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.hallway_ceiling_light
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: script.lights_hallway_filament_lamp
+                entity: light.filament_lamp
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.hallway_light_strip
+                aspect_ratio: 1
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_name: true
+            name: Kitchen
+            show_icon: true
+            show_label: true
+            show_state: false
+            size: 100px
+            state:
+              - value: 'off'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(61, 65, 67)
+                  name:
+                    - color: gray
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+              - value: 'on'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: gray
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+            tap_action:
+              action: call-service
+              service: script.lights_main_kitchen
+              service_data:
+                entity_id: null
+            entity: light.kitchen
+            icon: mdi:silverware-variant
+            aspect_ratio: 1
+            label: |
+              [[[
+                return 'lights are ' + states['light.kitchen'].state;
+              ]]]
+          - square: true
+            columns: 2
+            type: grid
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: disabled
+                    icon: mdi:motion-sensor-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    icon: mdi:motion-sensor
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: input_select.select_next
+                  service_data:
+                    entity_id: input_select.motion_sensing_kitchen
+                entity: input_select.motion_sensing_kitchen
+                icon: mdi:motion-sensor
+                name: null
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.bench_light
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 50%
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.hue_ambiance_candle_3
+                aspect_ratio: 1
+                icon: mdi:window-closed-variant
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.oven_light
+                aspect_ratio: 1
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_name: true
+            name: Living room
+            show_icon: true
+            show_label: true
+            show_state: false
+            size: 100px
+            state:
+              - value: 'off'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(61, 65, 67)
+                  name:
+                    - color: gray
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+              - value: 'on'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+            tap_action:
+              action: call-service
+              service: script.lights_main_living_room
+              service_data:
+                entity_id: null
+            entity: light.living_room
+            icon: hue:room-living
+            aspect_ratio: 1
+            label: |
+              [[[
+                return 'lights are ' + states['light.living_room'].state;
+              ]]]
+          - square: true
+            columns: 2
+            type: grid
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: disabled
+                    icon: mdi:motion-sensor-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    icon: mdi:motion-sensor
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: input_select.select_next
+                  service_data:
+                    entity_id: input_select.motion_sensing_living_room
+                entity: input_select.motion_sensing_living_room
+                icon: mdi:motion-sensor
+                name: null
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                entity: switch.ikea_outlet_3_aquarium_light_on_off
+                size: 45px
+                state:
+                  - value: 'off'
+                    icon: mdi:fishbowl-outline
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    icon: mdi:fishbowl
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: true
+                size: 45px
+                styles:
+                  label:
+                    - font-size: 12px
+                    - color: grey
+                  state:
+                    - font-size: 15px
+                    - color: grey
+                state:
+                  - color: '#db4437'
+                    operator: '>='
+                    value: 60
+                    icon: mdi:cloud-alert
+                  - color: rgb(123, 154, 156)
+                    operator: <
+                    value: 55
+                    icon: mdi:cloud-check-variant
+                  - color: '#ffa600'
+                    operator: <=
+                    value: 59
+                    icon: mdi:cloud-alert
+                  - color: '#db4437'
+                    operator: <=
+                    value: 30
+                    icon: mdi:cloud-alert
+                aspect_ratio: 1
+                icon: mdi:cloud
+                entity: sensor.ikea_of_sweden_vindstyrka_humidity
+                label: Humidity
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: paused
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: playing
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: androidtv.adb_command
+                  service_data:
+                    command: POWER
+                    device_id: 6b8bf35340a5f40888903df44603bc6c
+                entity: remote.shield
+                icon: mdi:television-classic
+                name: TV
+                aspect_ratio: 1
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_name: true
+            name: Bedroom
+            show_icon: true
+            show_label: true
+            show_state: false
+            size: 95px
+            state:
+              - value: 'off'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(61, 65, 67)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+              - value: 'on'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: rgb(179, 179, 179)
+            tap_action:
+              action: call-service
+              service: script.lights_main_bedroom
+              service_data:
+                entity_id: null
+            entity: light.bedroom
+            icon: mdi:bed
+            aspect_ratio: 1
+            label: |
+              [[[
+                return 'lights are ' + states['light.bedroom'].state;
+              ]]]
+          - square: true
+            columns: 2
+            type: grid
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 50px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                entity: light.bedroom_ceiling_light
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: input_select.select_next
+                  service_data:
+                    entity_id: input_select.scene_cycle_bedroom
+                hold_action:
+                  action: toggle
+                  entity: light.light
+                aspect_ratio: 1
+                icon: mdi:mushroom
+                entity: light.light
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: true
+                size: 45px
+                styles:
+                  label:
+                    - font-size: 12px
+                    - color: grey
+                  state:
+                    - font-size: 15px
+                    - color: grey
+                state:
+                  - color: '#db4437'
+                    operator: '>='
+                    value: 60
+                    icon: mdi:cloud-alert
+                  - color: rgb(123, 154, 156)
+                    operator: <
+                    value: 55
+                    icon: mdi:cloud-check-variant
+                  - color: '#ffa600'
+                    operator: <=
+                    value: 59
+                    icon: mdi:cloud-alert
+                  - color: '#db4437'
+                    operator: <=
+                    value: 30
+                    icon: mdi:cloud-alert
+                aspect_ratio: 1
+                icon: mdi:cloud
+                entity: sensor.vindstyrka_2_humidity_2
+                label: Humidity
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 50px
+                state:
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: rgb(179, 179, 179)
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: script.lights_bedroom_g93
+                entity: light.hue_filament_g93_2100
+                aspect_ratio: 1
+      - square: false
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_name: true
+            name: Bathroom
+            show_icon: true
+            show_label: true
+            show_state: false
+            size: 90px
+            state:
+              - value: 'off'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(61, 65, 67)
+                  name:
+                    - color: gray
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+              - value: 'on'
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: rgb(179, 179, 179)
+                  state:
+                    - color: gray
+                  label:
+                    - color: rgb(179, 179, 179)
+            tap_action:
+              action: call-service
+              service: script.lights_main_bathroom
+              service_data:
+                entity_id: null
+            entity: light.bathroom
+            icon: hue:room-bathroom
+            aspect_ratio: 1
+            label: |
+              [[[
+                return 'lights are ' + states['light.bathroom'].state;
+              ]]]
+          - square: false
+            columns: 2
+            type: grid
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                size: 45px
+                state:
+                  - value: disabled
+                    icon: mdi:motion-sensor-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'off'
+                    icon: mdi:motion-sensor
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: input_select.select_next
+                  service_data:
+                    entity_id: input_select.motion_sensing_bathroom
+                entity: input_select.motion_sensing_bathroom
+                icon: mdi:motion-sensor
+                name: null
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                icon: hue:scene-concentrate
+                show_label: true
+                show_state: false
+                size: 45px
+                styles:
+                  card:
+                    - color: transparent
+                  icon:
+                    - color: rgb(255, 237, 179)
+                  name:
+                    - color: white
+                    - font-size: 12px
+                  state:
+                    - color: gray
+                  label:
+                    - color: gray
+                state:
+                  - value: 'off'
+                    icon: hue:scene-concentrate
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: call-service
+                  service: scene.turn_on
+                  service_data:
+                    entity_id: scene.bathroom_concentrate
+                entity: input_boolean.bathroom_concentrate
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: true
+                size: 45px
+                styles:
+                  label:
+                    - font-size: 12px
+                    - color: grey
+                  state:
+                    - font-size: 15px
+                    - color: grey
+                state:
+                  - color: '#db4437'
+                    operator: '>='
+                    value: 60
+                    icon: mdi:cloud-alert
+                  - color: rgb(123, 154, 156)
+                    operator: <
+                    value: 55
+                    icon: mdi:cloud-check-variant
+                  - color: '#ffa600'
+                    operator: <=
+                    value: 59
+                    icon: mdi:cloud-alert
+                  - color: '#db4437'
+                    operator: <=
+                    value: 30
+                    icon: mdi:cloud-alert
+                aspect_ratio: 1
+                icon: mdi:cloud
+                entity: sensor.lumi_lumi_weather_humidity
+                label: Humidity
+              - type: custom:button-card
+                color_type: icon
+                aspect_ratio: 1
+                show_name: false
+                entity: binary_sensor.water_leak_sensor_ias_zone
+                size: 45px
+                state:
+                  - value: 'off'
+                    icon: mdi:water-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    icon: mdi:water-alert
+                    styles:
+                      card:
+                        - color: transparent
+                        - animation: blink 1s ease infinite
+                      icon:
+                        - color: rgb(255, 237, 179)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+      - type: horizontal-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - square: true
+                columns: 1
+                type: grid
+                cards:
+                  - type: custom:button-card
+                    show_name: false
+                    show_icon: true
+                    show_label: true
+                    show_state: false
+                    size: 45px
+                    icon: mdi:cog
+                    styles:
+                      icon:
+                        - color: rgb(61, 65, 67)
+                    aspect_ratio: 1
+                    tap_action:
+                      action: call-service
+                      service: input_select.select_next
+                      service_data:
+                        entity_id: input_select.dropdown_input_notifications_panel
+                  - type: custom:button-card
+                    color_type: icon
+                    aspect_ratio: 1
+                    show_name: false
+                    show_icon: true
+                    entity: input_boolean.guests
+                    size: 45px
+                    state:
+                      - value: 'off'
+                        styles:
+                          card:
+                            - color: transparent
+                          icon:
+                            - color: rgb(61, 65, 67)
+                          name:
+                            - color: white
+                          state:
+                            - color: gray
+                          label:
+                            - color: gray
+                      - value: 'on'
+                        styles:
+                          card:
+                            - color: transparent
+                          icon:
+                            - color: white
+                          name:
+                            - color: white
+                          state:
+                            - color: gray
+                          label:
+                            - color: gray
+                    tap_action:
+                      action: toggle
+              - type: custom:button-card
+                entity: counter.aska_s_shot
+                icon: mdi:needle
+                show_state: true
+                show_label: true
+                show_name: false
+                show_icon: true
+                aspect_ratio: 0.47
+                name: Shot is due in
+                label: days<br/>left
+                size: 45px
+                styles:
+                  card:
+                    - height: '1:1'
+                    - color: transparent
+                  icon:
+                    - color: white
+                  grid:
+                    - grid-template-areas: '"i" "s" "l"'
+                    - grid-template-columns: 1fr
+                  state:
+                    - justify-self: center
+                    - font-size: 35px
+                    - color: gray
+                  label:
+                    - justify-self: center
+                    - font-size: 15px
+                    - color: grey
+                action: more-info
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: counter.plants_watered
+                show_state: true
+                show_label: true
+                show_name: false
+                show_icon: true
+                size: 45px
+                aspect_ratio: 0.47
+                label: days<br/>ago
+                styles:
+                  card:
+                    - height: '1:1'
+                    - color: transparent
+                  icon:
+                    - color: rgb(130, 156, 124)
+                  grid:
+                    - grid-template-areas: '"i" "s" "l"'
+                    - grid-template-columns: 1fr
+                  state:
+                    - justify-self: center
+                    - font-size: 35px
+                    - color: gray
+                  label:
+                    - justify-self: center
+                    - font-size: 15px
+                    - color: grey
+                action: more-info
+              - type: custom:button-card
+                entity: counter.aska_nail_clipping
+                icon: mdi:paw
+                show_state: true
+                show_label: true
+                show_name: false
+                show_icon: true
+                size: 45px
+                aspect_ratio: 0.47
+                name: Claws clipped
+                label: days<br/>ago
+                styles:
+                  card:
+                    - height: '1:1'
+                    - color: transparent
+                  icon:
+                    - color: rgb(185, 167, 175)
+                  grid:
+                    - grid-template-areas: '"i" "s" "l"'
+                    - grid-template-columns: 1fr
+                  state:
+                    - justify-self: center
+                    - font-size: 35px
+                    - color: gray
+                  label:
+                    - justify-self: center
+                    - font-size: 15px
+                    - color: grey
+                action: more-info
+  - type: vertical-stack
+    cards:
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            entity: sensor.hour
+            show_state: true
+            show_name: false
+            show_icon: false
+            aspect_ratio: null
+            styles:
+              state:
+                - font-size: 115px
+              card:
+                - height: 100%
+          - type: custom:button-card
+            entity: sensor.minute
+            show_state: true
+            show_name: false
+            show_icon: false
+            aspect_ratio: null
+            styles:
+              state:
+                - font-size: 115px
+              card:
+                - height: 100%
+      - square: true
+        columns: 2
+        type: grid
+        cards:
+          - type: custom:button-card
+            show_label: true
+            aspect_ratio: 1
+            styles:
+              label:
+                - font-size: 15px
+            label: |
+              [[[
+                return 'Good ' + states['input_select.time_of_day'].state + '!<br/>' + '<br/>' + 'It is ' + states['sensor.weekday'].state + '<br/>' 
+                 + states['sensor.day_of_month'].state + ' ' + states['sensor.month_short'].state + ', week ' + states['sensor.weekyear'].state + '<br/>' + '<br/>' + 'The UV index is ' + states['sensor.home_uv_index'].state;
+              ]]]
+          - type: custom:button-card
+            entity: weather.home_2
+            icon: mdi:sun-thermometer-outline
+            show_state: false
+            show_label: true
+            show_name: false
+            show_icon: true
+            show_entity_picture: true
+            aspect_ratio: 1
+            styles:
+              card:
+                - height: '1:1'
+              icon:
+                - color: rgb(2, 104, 151)
+                - size: 40px
+              name:
+                - null
+              grid:
+                - grid-template-areas: '"i" "s" "l"'
+                - grid-template-columns: 1fr
+              state:
+                - justify-self: center
+                - font-size: 27px
+              label:
+                - justify-self: center
+                - font-size: 35px
+            state:
+              - value: clear-night
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/CLEAR_NIGHT.svg
+              - value: cloudy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/CLOUDY.svg
+              - value: exceptional
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/CLEAR_DAY.svg
+              - value: fog
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/FOG.svg
+              - value: hail
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/HEAVY_SNOW.svg
+              - value: lightning-rainy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/HEAVY_RAIN.svg
+              - value: lightning
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/HEAVY_RAIN.svg
+              - value: partlycloudy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/CLOUDY.svg
+              - value: pouring
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/HEAVY_RAIN.svg
+              - value: rainy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/MODERATE_RAIN.svg
+              - value: snowy-rainy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/LIGHT_SNOW.svg
+              - value: snowy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/HEAVY_SNOW.svg
+              - value: sunny
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/CLEAR_DAY.svg
+              - value: windy-variant
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/WIND.svg
+              - value: windy
+                entity_picture: >-
+                  /local/community/lovelace-colorfulclouds-weather-card/icons/animated1/WIND.svg
+            label: |
+              [[[
+                return states['sensor.hue_outdoor_motion_sensor_1_temperature'].state + ' °C';
+              ]]]
+      - type: horizontal-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                entity: switch.ikea_outlet_2_aquarium_filter_on_off
+                size: 45px
+                state:
+                  - value: 'off'
+                    icon: mdi:water-pump-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    icon: mdi:water-pump
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                aspect_ratio: 1
+              - type: custom:button-card
+                show_name: false
+                show_icon: true
+                show_label: true
+                show_state: false
+                entity: switch.ikea_outlet_1_aquarium_pump_on_off
+                size: 45px
+                state:
+                  - value: 'off'
+                    icon: mdi:fan-off
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: rgb(61, 65, 67)
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                  - value: 'on'
+                    spin: true
+                    styles:
+                      card:
+                        - color: transparent
+                      icon:
+                        - color: white
+                      name:
+                        - color: white
+                      state:
+                        - color: gray
+                      label:
+                        - color: gray
+                tap_action:
+                  action: toggle
+                aspect_ratio: 1
+          - type: custom:button-card
+            entity: sensor.home_realfeel_temperature
+            icon: mdi:sun-thermometer-outline
+            show_state: true
+            show_label: true
+            show_name: false
+            show_icon: false
+            aspect_ratio: 2.1
+            label: RealFeel
+            styles:
+              card:
+                - height: '1:1'
+              icon:
+                - color: rgb(2, 104, 151)
+                - size: 40px
+              name:
+                - null
+              grid:
+                - grid-template-areas: '"n" "s" "l"'
+                - grid-template-columns: 1fr
+              state:
+                - justify-self: center
+                - font-size: 35px
+              label:
+                - justify-self: center
+                - font-size: 15px
+                - color: grey
+      - type: custom:clock-weather-card
+        entity: weather.home
+        sun_entity: sun.sun
+        temperature_sensor: sensor.outdoor_temp
+        weather_icon_type: fill
+        animated_icon: true
+        forecast_days: 5
+        locale: sv
+        time_format: 24
+        date_pattern: P
+        hide_today_section: true
+        hide_forecast_section: false
+        hide_clock: false
+        hide_date: true
+      - type: horizontal-stack
+        cards:
+          - hours_to_show: 12
+            graph: line
+            type: sensor
+            entity: sensor.pm25
+            detail: 2
+            icon: mdi:air-filter
+            name: PM2,5
+          - type: gauge
+            severity:
+              green: 0
+              yellow: 0.85
+              red: 1.7
+            needle: true
+            entity: sensor.nordpool_se3_v2
+            min: 0
+            name: SEK / kWh    Elpriset
+            max: 2.55
+            unit: ' '
+      - type: conditional
+        conditions:
+          - entity: input_select.dropdown_input_notifications_panel
+            state: '2'
+        card:
+          square: false
+          columns: 2
+          type: grid
+          cards:
+            - type: horizontal-stack
+              cards:
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_previous
+                    service_data:
+                      entity_id: input_select.carparking
+                  icon: mdi:arrow-up-bold
+                  name: TV
+                  aspect_ratio: 1
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: paused
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: playing
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_next
+                    service_data:
+                      entity_id: input_select.carparking
+                  icon: mdi:arrow-down-bold
+                  name: TV
+                  aspect_ratio: 1
+            - type: custom:button-card
+              entity: input_select.carparking
+              aspect_ratio: 2.1
+              styles:
+                name:
+                  - font-size: 15px
+                  - color: grey
+                state:
+                  - font-size: 20px
+              name: Car is parked on
+              show_name: true
+              show_state: true
+              show_icon: false
+      - type: conditional
+        conditions:
+          - entity: input_select.dropdown_input_notifications_panel
+            state: '1'
+        card:
+          square: false
+          columns: 4
+          type: grid
+          cards:
+            - type: custom:button-card
+              color_type: icon
+              aspect_ratio: 0.95
+              entity: binary_sensor.samjin_multi_b2311101_ias_zone
+              name: washing day
+              size: 45px
+              state:
+                - value: 'off'
+                  icon: mdi:door-closed-lock
+                  styles:
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: rgb(61, 65, 67)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+                - value: 'on'
+                  icon: mdi:door-open
+                  styles:
+                    card:
+                      - color: transparent
+                      - animation: blink 1s ease infinite
+                    icon:
+                      - color: rgb(255, 237, 179)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+              show_name: false
+            - type: custom:button-card
+              color_type: icon
+              aspect_ratio: 0.95
+              show_name: false
+              entity: binary_sensor.fridge_contact_sensor_ias_zone
+              size: 45px
+              state:
+                - value: 'off'
+                  icon: mdi:fridge
+                  styles:
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: rgb(61, 65, 67)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+                - value: 'on'
+                  icon: mdi:fridge-alert
+                  styles:
+                    card:
+                      - color: transparent
+                      - animation: blink 1s ease infinite
+                    icon:
+                      - color: rgb(255, 237, 179)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+            - type: custom:button-card
+              color_type: icon
+              aspect_ratio: 0.95
+              entity: input_boolean.felparkering
+              name: washing day
+              size: 45px
+              state:
+                - value: 'off'
+                  icon: mdi:car-brake-parking
+                  styles:
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: rgb(61, 65, 67)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+                - value: 'on'
+                  icon: mdi:car-brake-parking
+                  styles:
+                    card:
+                      - color: transparent
+                      - animation: blink 1s ease infinite
+                    icon:
+                      - color: rgb(255, 237, 179)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+              show_name: false
+            - type: custom:button-card
+              color_type: icon
+              aspect_ratio: 0.95
+              entity: input_boolean.washing_day_lamp
+              name: washing day
+              size: 45px
+              state:
+                - value: 'off'
+                  icon: mdi:washing-machine-off
+                  styles:
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: rgb(61, 65, 67)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+                - value: 'on'
+                  icon: mdi:washing-machine-alert
+                  styles:
+                    card:
+                      - color: transparent
+                      - animation: blink 1s ease infinite
+                    icon:
+                      - color: rgb(255, 237, 179)
+                    name:
+                      - color: white
+                    state:
+                      - color: gray
+                    label:
+                      - color: gray
+              show_name: false
+      - type: conditional
+        conditions:
+          - entity: input_select.dropdown_input_notifications_panel
+            state: '2'
+        card:
+          type: horizontal-stack
+          cards:
+            - square: true
+              columns: 2
+              type: grid
+              cards:
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_previous
+                    service_data:
+                      entity_id: input_select.washing_day
+                  icon: mdi:arrow-up-bold
+                  name: TV
+                  aspect_ratio: 0.95
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: paused
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: playing
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_next
+                    service_data:
+                      entity_id: input_select.washing_day
+                  icon: mdi:arrow-down-bold
+                  name: TV
+                  aspect_ratio: 0.95
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_previous
+                    service_data:
+                      entity_id: input_select.washing_time
+                  icon: mdi:arrow-up-bold
+                  name: TV
+                  aspect_ratio: 0.95
+                - type: custom:button-card
+                  show_name: false
+                  show_icon: true
+                  show_label: true
+                  show_state: false
+                  size: 45px
+                  state:
+                    - value: paused
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: playing
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: gray
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: call-service
+                    service: input_select.select_next
+                    service_data:
+                      entity_id: input_select.washing_time
+                  icon: mdi:arrow-down-bold
+                  name: TV
+                  aspect_ratio: 0.95
+            - type: vertical-stack
+              cards:
+                - type: custom:button-card
+                  entity: input_select.washing_day
+                  aspect_ratio: 2.1
+                  styles:
+                    name:
+                      - font-size: 15px
+                      - color: grey
+                    state:
+                      - font-size: 20px
+                  name: Washing is booked on the
+                  show_name: true
+                  show_state: true
+                  show_icon: false
+                - type: custom:button-card
+                  entity: input_select.washing_time
+                  aspect_ratio: 2.1
+                  styles:
+                    name:
+                      - font-size: 15px
+                      - color: grey
+                    state:
+                      - font-size: 20px
+                  name: between
+                  show_name: true
+                  show_state: true
+                  show_icon: false
+      - type: conditional
+        conditions:
+          - entity: input_select.dropdown_input_notifications_panel
+            state: '1'
+        card:
+          type: horizontal-stack
+          cards:
+            - type: horizontal-stack
+              cards:
+                - type: custom:button-card
+                  show_name: false
+                  name: Circadian<br/>rhythm
+                  show_icon: true
+                  show_label: true
+                  label: AUTO TEMP<br/>Circadian<br/>rhythm OFF
+                  show_state: true
+                  size: 45px
+                  styles:
+                    grid:
+                      - grid-template-areas: '"i" "s" "l"'
+                      - grid-template-columns: 1fr
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: white
+                    name:
+                      - color: white
+                      - font-size: 14px
+                    state:
+                      - color: gray
+                      - font-size: 30px
+                    label:
+                      - color: gray
+                      - font-size: 10px
+                  state:
+                    - value: 'on'
+                      icon: mdi:sun-clock
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                          - size: 50px
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      icon: mdi:sun-clock
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: toggle
+                  entity: input_boolean.circadian_rhythm
+                  aspect_ratio: 0.47
+                - type: custom:button-card
+                  show_name: false
+                  name: Motion<br/>sensors
+                  show_icon: true
+                  show_label: true
+                  label: MOTION<br/>All sensors<br/>turn OFF
+                  show_state: true
+                  size: 45px
+                  styles:
+                    grid:
+                      - grid-template-areas: '"i" "s" "l"'
+                      - grid-template-columns: 1fr
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: white
+                    name:
+                      - color: white
+                      - font-size: 14px
+                    state:
+                      - color: gray
+                      - font-size: 30px
+                    label:
+                      - color: gray
+                      - font-size: 10px
+                  state:
+                    - value: 'on'
+                      icon: mdi:motion-sensor
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: white
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - value: 'off'
+                      icon: mdi:motion-sensor-off
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                  tap_action:
+                    action: toggle
+                  entity: input_boolean.main_motion_sensors
+                  aspect_ratio: 0.47
+            - type: horizontal-stack
+              cards:
+                - type: custom:button-card
+                  entity: input_boolean.do_not_disturb
+                  icon: mdi:minus-circle-outline
+                  show_state: true
+                  show_label: true
+                  label: DND<br/>Automations<br/>turn OFF
+                  show_name: false
+                  show_icon: true
+                  aspect_ratio: 0.47
+                  size: 45px
+                  state:
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: gold
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - operator: default
+                      icon: mdi:weather-night
+                  styles:
+                    grid:
+                      - grid-template-areas: '"i" "s" "l"'
+                      - grid-template-columns: 1fr
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: white
+                    name:
+                      - color: white
+                      - font-size: 14px
+                    state:
+                      - color: gray
+                      - font-size: 30px
+                    label:
+                      - color: gray
+                      - font-size: 10px
+                  action: toggle
+                  hold_action:
+                    action: call-service
+                    service: light.turn_off
+                    service_data:
+                      entity_id: light.the_house
+                - type: custom:button-card
+                  entity: input_boolean.bedtime_mode
+                  icon: hue:scene-nightlight
+                  show_state: true
+                  show_label: true
+                  label: NIGHT MODE<br/>Motion OFF<br/>Nightlight ON
+                  show_name: false
+                  show_icon: true
+                  aspect_ratio: 0.47
+                  size: 45px
+                  state:
+                    - value: 'off'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: rgb(61, 65, 67)
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - value: 'on'
+                      styles:
+                        card:
+                          - color: transparent
+                        icon:
+                          - color: gold
+                          - animation: blink 3s ease infinite
+                        name:
+                          - color: white
+                        state:
+                          - color: transparent
+                        label:
+                          - color: gray
+                    - operator: default
+                      icon: mdi:weather-night
+                  styles:
+                    grid:
+                      - grid-template-areas: '"i" "s" "l"'
+                      - grid-template-columns: 1fr
+                    card:
+                      - color: transparent
+                    icon:
+                      - color: white
+                    name:
+                      - color: white
+                      - font-size: 14px
+                    state:
+                      - color: gray
+                      - font-size: 30px
+                    label:
+                      - color: gray
+                      - font-size: 10px
+                  action: toggle
+                  hold_action:
+                    action: call-service
+                    service: light.turn_off
+                    service_data:
+                      entity_id: light.the_house
